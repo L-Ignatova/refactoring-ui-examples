@@ -1,0 +1,87 @@
+h1, p, button {
+    font-weight: 500;
+}
+
+.card {
+    width: 700px;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+
+    overflow: hidden;
+    border-radius: 13px;
+
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+    box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.15);
+}
+
+p {
+    margin-bottom: 20px;
+    color: rgb(127, 127, 127);
+}
+
+.card-content,
+.buttons {
+    padding: 10px;
+}
+
+h1.title {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+p.subtitle {
+    font-size: 14px;
+}
+
+img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    border: none;
+    color: whitesmoke;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+.wrong.buttons > .btn.delete {
+    background-color: rgb(220, 50, 65);
+    margin-right: 70px;
+}
+.wrong.buttons > .btn.edit {
+    background-color: rgb(0, 120, 255);
+    margin-right: 10px;
+}
+.wrong.buttons > .btn.publish {
+    background-color: rgb(40, 165, 65);
+}
+
+.right.buttons > .btn.delete {
+    color: rgb(65, 125, 155);
+    background-color: transparent;
+    margin-right: 70px;
+}
+.right.buttons > .btn.edit {
+    color: rgb(65, 125, 155);
+    background-color: rgb(235, 240, 245);
+    margin-right: 10px;
+}
+.right.buttons > .btn.publish {
+    background-color: rgb(65, 125, 155);
+}
