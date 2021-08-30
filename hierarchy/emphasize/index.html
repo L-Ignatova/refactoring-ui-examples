@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emphasize by de-emphasizing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../static/common.css">
+</head>
+<body>
+    <main>
+        <section class="wrong">
+            <article class="wrong-icon">
+                <p style="color: rgb(251, 182, 182);"><i class="fas fa-times-circle"></i></p>
+            </article>
+    
+            <article class="wrong-content">
+                <div class="logo">
+                    <img src="../../static/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#">Dashboard</a></li>
+                        <li class="menu-item active"><a href="#">Orders</a></li>
+                        <li class="menu-item"><a href="#">Products</a></li>
+                        <li class="menu-item"><a href="#">Discounts</a></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    
+        <section class="right">
+            <article class="right-icon">
+                <p style="color: rgb(155, 225, 180);"><i class="fas fa-check-circle"></i></p>
+            </article>
+    
+            <article class="right-content">
+                <div class="logo">
+                    <img src="../../static/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#">Dashboard</a></li>
+                        <li class="menu-item active"><a href="#">Orders</a></li>
+                        <li class="menu-item"><a href="#">Products</a></li>
+                        <li class="menu-item"><a href="#">Discounts</a></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function checkIfActive(currentElement, clickedElement) {
+            if (currentElement === clickedElement) {
+                currentElement.classList.add("active");
+            } else {
+                currentElement.classList.remove("active");
+            }
+        }
+        function addEvents(...menus) {
+            for (const menu of menus) {
+                menu.forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        menu.forEach(i => checkIfActive(i, e.target.parentNode));
+                    })
+                })
+            }
+            
+        }
+
+        const menuReferences = {
+            wrongMenuItems: () => document.body.querySelector(".wrong-content").querySelectorAll(".menu-item"),
+            rightMenuItems: () => document.body.querySelector(".right-content").querySelectorAll(".menu-item"),
+        }
+
+        addEvents(menuReferences.wrongMenuItems(), menuReferences.rightMenuItems());
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+.card {
+    width: 700px;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+
+    overflow: hidden;
+    border-radius: 13px;
+
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+    box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.15);
+}
+p {
+    align-self: baseline;
+}
+img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content-title,
+.card-content-details {
+    height: 50%;
+    padding: 15px 20px;
+}
+
+.card-content-details {
+    background-color: rgb(240, 245, 245);
+}
+.card-content-title > h1 {
+    margin-bottom: 15px;
+}
+.card-content-details-booking {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-content-pricing,
+.card-content-review {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin-right: 5px;
+}
+.stars {
+    margin-right: 10px;
+}
+.card-content-details-asterix {
+    margin-top: 5px;
+}
+.fa-star {
+    color: rgb(43, 150, 130);
+}
+.btn {
+    border: none;
+    background-color: rgb(62, 113, 177);
+    color: whitesmoke;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 12px 1px rgba(0,0,0,0.15);
+}
+
+.wrong.card-content > .card-content-title > h1 {
+    font-size: 30px;
+    font-weight: 400;
+}
+.wrong.card-content-pricing > .price {
+    font-size: 24px;
+}
+.wrong.card-content-pricing > .price-distinction,
+.wrong.card-content-review > .reviews,
+.wrong.card-content-details-asterix > p  {
+    font-size: 14px;
+}
+
+
+.right.card-content > .card-content-title > h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.right.card-content > .card-content-title > p,
+.right.card-content-pricing > .price-distinction {
+    color: hsl(201, 23%, 34%);
+    font-size: 18px;
+}
+.right.card-content-details-asterix > p,
+.right.card-content-review > .reviews  {
+    color: hsl(203, 15%, 47%);
+}
+.right.card-content-pricing > .price {
+    font-weight: 700;
+    font-size: 18px;
+}
